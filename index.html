@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uche Prince | Frontend Developer Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header / Navigation -->
+    <header>
+        <div class="container">
+            <div class="nav-wrapper">
+                <a href="#" class="logo">UP.</a>
+                <ul class="nav-menu">
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section  -->
+    <section class="hero">
+        <div class="hero-glow"></div>
+        <canvas id="hero-canvas"></canvas>
+        <div class="container hero-content">
+            <h1 class="hero-title anim-title">
+                Hi, I am <span>Uche Prince</span>
+            </h1>
+            <p class="hero-description anim-desc">
+                A Computer Science student and Frontend Developer focused on building clean, functional, and highly responsive web applications using React and modern web tools.
+            </p>
+            <div class="cta-group anim-ctas">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <div>
+                    <h2 class="section-title reveal">Featured Projects</h2>
+                    <p class="section-subtitle reveal">Real-world applications and web experiences I have built.</p>
+                </div>
+                
+                <!-- Category Filters -->
+                <div class="filter-group reveal">
+                    <button onclick="filterProjects('all')" class="filter-btn active">All Projects</button>
+                    <button onclick="filterProjects('react')" class="filter-btn">React.js</button>
+                    <button onclick="filterProjects('vanilla')" class="filter-btn">Vanilla JS & CSS</button>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project Card 1 (React) -->
+                <div class="project-card reveal" data-category="react">
+                    <div>
+                        <h3 class="project-name">Habit Tracker Pro</h3>
+                        <p class="project-desc">
+                            A robust React application built to help users seamlessly log, monitor, and maintain daily routines with persistent tracking and detailed habit completion streaks.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Vite</span>
+                            <span class="tag">Tailwind CSS</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://habit-tracker-pro-5mqx.vercel.app/login" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 2 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">FluidCore Webpage</h3>
+                        <p class="project-desc">
+                            A fully responsive landing page designed with an emphasis on fluid UI transitions, modern layouts, and crisp performance across all devices and screen sizes.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/FluidCore-Responsive-Webpage" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://fluid-core-responsive-webpage.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 3 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">MedCore Patient Monitor</h3>
+                        <p class="project-desc">
+                            A vanilla JavaScript app simulating a real-time patient monitoring panel. Users trigger actions (stimulants, sedatives) that dynamically recalculate and animate live heart rate (BPM) data, with a toggleable "Night Shift" dark mode.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/MedCore-Live-Monitor" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://med-core-live-monitor.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 4 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">MedCore Static Homepage</h3>
+                        <p class="project-desc">
+                            A pixel-perfect, fully responsive medical website homepage designed and built to meet strict internal engineering blueprint requirements.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/MedCore-Hospital-static-webpage" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://med-core-hospital-static-webpage.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 5 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">MedCore Form Validator</h3>
+                        <p class="project-desc">
+                            A lightweight frontend interface for secure form input handling and dynamic validation, built with core JavaScript DOM logic and cascading CSS. No frameworks, no bloat just predictable, handwritten browser execution.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/MedCore-Hospital--Validation-Form" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://med-core-hospital-validation-form.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+                <!-- Project Card 6 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">HNG Todo Card</h3>
+                        <p class="project-desc">
+                            A responsive and accessible Todo Item Card built with semantic HTML, CSS, and JavaScript.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                            <span class="tag">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/HNG-stage0-todo-card" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://hng-stage0-todo-card-pi.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+
+                <!-- Project Card 7 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">Seamwork</h3>
+                        <p class="project-desc">
+                            A clean frontend interface for browsing clothing patterns and seam techniques, combining simple layout design with intuitive navigation for a smooth, distraction free browsing experience.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/Seamwork" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://seamwork.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+
+
+                <!-- Project Card 8 (Vanilla) -->
+                <div class="project-card reveal" data-category="vanilla">
+                    <div>
+                        <h3 class="project-name">My-Gallery</h3>
+                        <p class="project-desc">
+                           A compact image gallery built with pure CSS, showcasing layout and styling techniques like grids, hover effects, and transitions without relying on JavaScript.
+                        </p>
+                        <div class="tech-tags">
+                            <span class="tag">HTML5</span>
+                            <span class="tag">CSS3</span>
+                        </div>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/PrinceUche2025/My-Gallery" target="_blank" class="link-git">GitHub Code &rarr;</a>
+                        <a href="https://my-gallery-blush.vercel.app/" target="_blank" class="link-demo">Live Demo &#8599;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title reveal">Skills</h2>
+            <p class="section-subtitle reveal">Technologies, frameworks, and developer tools I work with daily.</p>
+            
+            <div class="skills-grid">
+                <!-- Category 1 -->
+                <div class="skills-card reveal">
+                    <h3 class="skills-category">Frontend Core</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">HTML5</span>
+                        <span class="skill-item">CSS3</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">React.js</span>
+                    </div>
+                </div>
+
+                <!-- Category 2 -->
+                <div class="skills-card reveal">
+                    <h3 class="skills-category">Styling & Design</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Tailwind CSS</span>
+                        <span class="skill-item">CSS Grid</span>
+                        <span class="skill-item">Flexbox</span>
+                        <span class="skill-item">Responsive Design</span>
+                        <span class="skill-item">UI Layouts</span>
+                    </div>
+                </div>
+
+                <!-- Category 3 -->
+                <div class="skills-card reveal">
+                    <h3 class="skills-category">Workflow & Tools</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Vite</span>
+                        <span class="skill-item">Git</span>
+                        <span class="skill-item">GitHub</span>
+                        <span class="skill-item">Vercel</span>
+                        <span class="skill-item">DevTools</span>
+                    </div>
+                </div>
+
+                <!-- Category 4 -->
+                <div class="skills-card reveal">
+                    <h3 class="skills-category">CS Foundations</h3>
+                    <div class="skills-list">
+                        <span class="skill-item">Data Structures</span>
+                        <span class="skill-item">Algorithms</span>
+                        <span class="skill-item">OOP Principles</span>
+                        <span class="skill-item">DOM Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section / Footer -->
+    <footer id="contact">
+        <canvas id="footer-canvas"></canvas>
+        <div class="container footer-content">
+            <div class="footer-row reveal">
+                <div class="footer-left">
+                    <h2>Let's Connect</h2>
+                    <p>Open for SIWES internship placements and collaborations.</p>
+                </div>
+                <div class="footer-contacts">
+                    <a href="mailto:onyemachukwuprince@gmail.com">onyemachukwuprince@gmail.com</a>
+                    <span class="footer-divider">|</span>
+                    <span>08164227896</span>
+                    <span class="footer-divider">|</span>
+                    <a href="https://github.com/PrinceUche2025" target="_blank">GitHub Profile</a>
+                </div>
+            </div>
+            <p class="copyright-text">&copy; 2026 Uche Prince. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Interactive Logic & Animations Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
