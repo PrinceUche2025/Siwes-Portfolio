@@ -3,7 +3,7 @@
 Welcome! This is my professional portfolio website built specifically for my **Student Industrial Work Experience Scheme (SIWES) application. It showcases my responsive web design skills, clean vanilla Javascript engineering, and React.js foundation.
 
 ## Live Demo
-Check out the live, interactive portfolio here: []
+Check out the live, interactive portfolio here: [https://siwes-portfolio-ten.vercel.app/]
 
 
 ## Key Features of the Portfolio
